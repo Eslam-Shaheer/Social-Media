@@ -1,0 +1,20 @@
+<div class="card card-div">
+    <div class="card-body">
+        <h4 class="card-title"> {{post.author?.username}}</h4>
+        <h5 class="card-title"> {{post.title}}</h5>
+        <p class="card-text">{{post.body}}</p>
+        <p>{{post.timestamp | date }}</p>
+    </div>
+
+    @if(isAuther){
+    <div class="edit-button">
+
+        <a [routerLink]="['/post',post.id]">
+            <button class="btn btn-warning mx-2 ">Edit</button>
+        </a>
+        <button class="btn btn-danger " (click)="deletePost()">Delete</button>
+    </div>
+
+    }
+
+</div>

@@ -1,0 +1,10 @@
+<form (ngSubmit)="handleEdit()" [formGroup]="formGroup">
+    <div class="form-group">
+        <label>Title</label>
+        <input formControlName="title" type="text" class="form-control mb-2" name="title">
+    </div>
+    <label>Body</label>
+    <textarea formControlName="body" class="form-control" rows="7" name="body"> </textarea>
+    <button class="btn btn-info mt-3">Edit Post</button>
+
+</form>
